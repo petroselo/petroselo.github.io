@@ -1,0 +1,73 @@
+<!-- App for creating own quilts -->
+
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		
+		<link rel="stylesheet" type="text/css" href="stylesheet.css"/>
+		<link rel="icon" type="image/png" href="favicon.png">
+
+		<title>Quiltacious</title>
+	</head>
+	
+	<body>
+		<style id="cell-styler"></style>
+		<style id="preview-styler"></style>
+		<!--two boxes. one for controling and one for displaying-->
+		<div id="control-box">
+			
+			<div id="control-general">
+				<form style="margin-left: 30px;">
+					<h3>Quilt Specifications</h3>
+					Width: <input type="text" name="width" placeholder="5" size="6" maxlength="2" id="fwidth" />
+					<br/>
+					Height: <input type="text" name="height" placeholder="5" size="6" maxlength="2" id="fheight" />
+					<br/>
+					<button type="button" onclick="createQuilt()" id="create-button">   Create Quilt   </button>
+					<button type="button" onclick="loadsaveBox()" id="loadsave-button">Load / Save</button>
+				</form>
+			</div>
+
+			<div id="control-specific">
+				<!--controls-->
+				<form style="margin-left: 30px; padding-top: 5px;">
+					<h3>Square Specification</h3>
+					<h4>Square Type:</h4>
+					<img class="square-type" id="type1" src="type1.png" alt="type1" onclick="selectType(1)" />
+					<img class="square-type" id="type2" src="type2.png" alt="type2" onclick="selectType(2)" />
+					<img class="square-type" id="type3" src="type3.png" alt="type3" onclick="selectType(3)" />
+					<img class="square-type" id="type4" src="type4.png" alt="type4" onclick="selectType(4)" />
+					<br/>
+					<h4>Square Colour:</h4>
+					1: <input class="color" id="col1" onchange="selectColor(1, value)" readonly="true" /><br/>
+					2: <input class="color" id="col2" onchange="selectColor(2, value)" readonly="true" /><br/>
+					3: <input class="color" id="col3" onchange="selectColor(3, value)" readonly="true" /><br/>
+					4: <input class="color" id="col4" onchange="selectColor(4, value)" readonly="true" /><br/>
+				</form>
+				
+				<!--svg preview-->
+				<div id="svg-align">
+					<svg id="preview" viewbox="0 0 2 2" onclick="pushToQuilt()">
+					</svg>
+				</div>
+			</div>
+		</div>
+
+		<div id="quilt-box">
+			<div id="quilt-align">
+				<table id="quilt-table">
+
+				</table>
+			</div>
+		</div>
+
+		<!--div to hold the stuff for editing stuffs-->
+		<div id="greyout-container"></div>
+		<div id="loadsave-box-container"></div>
+
+		 <!--link to external javascript-->
+		<script type="text/javascript" src="javascript.js"></script>
+		<script type="text/javascript" src="jscolor/jscolor.js"></script>
+	</body>
+</html>
