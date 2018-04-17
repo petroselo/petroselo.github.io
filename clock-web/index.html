@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SampleApp</title>
+</head>
+<body>
+
+<style type="text/css">
+			* {
+				margin: 0;
+				border: 0;
+				padding: 0;
+			}
+
+			body {
+				background-color: #fff;
+			}
+
+			svg {
+				margin-left: calc(50% - 301px);
+				margin-top: 20px;
+				width: 602px;
+				height: 602px;
+				background-color: white;
+			}
+
+			#pointer {
+				stroke: #606;
+				stroke-width: 5px;
+				opacity: 0.5;
+			}
+
+			#centre {
+				r: 5;
+				stroke: #000;
+				stroke-width: 1;
+				fill: #000;
+			}
+
+			.divider {
+				stroke: #888;
+				stroke-width: 3;
+			}
+
+			.rim {
+				stroke: #000;
+				stroke-width: 4;
+				fill: none;
+			}
+		</style>
+
+		<svg>
+			<g>
+				<animateTransform id="hour" attributeName="transform" attributeType="XML" type="rotate" dur="12h" repeatCount="indefinite"/>
+
+				<line class="divider" x1="301" y1="100" x2="301" y2="0" transform="rotate(0 301 301)"/>
+				<line class="divider" x1="301" y1="100" x2="301" y2="0" transform="rotate(30 301 301)"/>
+				<line class="divider" x1="301" y1="100" x2="301" y2="0" transform="rotate(60 301 301)"/>
+				<line class="divider" x1="301" y1="100" x2="301" y2="0" transform="rotate(90 301 301)"/>
+				<line class="divider" x1="301" y1="100" x2="301" y2="0" transform="rotate(120 301 301)"/>
+				<line class="divider" x1="301" y1="100" x2="301" y2="0" transform="rotate(150 301 301)"/>
+				<line class="divider" x1="301" y1="100" x2="301" y2="0" transform="rotate(180 301 301)"/>
+				<line class="divider" x1="301" y1="100" x2="301" y2="0" transform="rotate(210 301 301)"/>
+				<line class="divider" x1="301" y1="100" x2="301" y2="0" transform="rotate(240 301 301)"/>
+				<line class="divider" x1="301" y1="100" x2="301" y2="0" transform="rotate(270 301 301)"/>
+				<line class="divider" x1="301" y1="100" x2="301" y2="0" transform="rotate(300 301 301)"/>
+				<line class="divider" x1="301" y1="100" x2="301" y2="0" transform="rotate(330 301 301)"/>
+				<circle class="rim" r="300" cx="301" cy="301"/>
+				<text x="271" y="75" textLength="60" transform="rotate(15 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:50;">12</text>
+				<text x="271" y="75" textLength="60" transform="rotate(45 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:50;">01</text>
+				<text x="271" y="75" textLength="60" transform="rotate(75 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:50;">02</text>
+				<text x="271" y="75" textLength="60" transform="rotate(105 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:50;">03</text>
+				<text x="271" y="75" textLength="60" transform="rotate(135 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:50;">04</text>
+				<text x="271" y="75" textLength="60" transform="rotate(165 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:50;">05</text>
+				<text x="271" y="75" textLength="60" transform="rotate(195 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:50;">06</text>
+				<text x="271" y="75" textLength="60" transform="rotate(225 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:50;">07</text>
+				<text x="271" y="75" textLength="60" transform="rotate(255 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:50;">08</text>
+				<text x="271" y="75" textLength="60" transform="rotate(285 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:50;">09</text>
+				<text x="271" y="75" textLength="60" transform="rotate(315 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:50;">10</text>
+				<text x="271" y="75" textLength="60" transform="rotate(345 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:50;">11</text>
+			</g>
+
+			<g>
+				<animateTransform id="10min" attributeName="transform" attributeType="XML" type="rotate" dur="1h" repeatCount="indefinite"/>
+
+				<line class="divider" x1="301" y1="150" x2="301" y2="100" transform="rotate(0 301 301)"/>
+				<line class="divider" x1="301" y1="150" x2="301" y2="100" transform="rotate(60 301 301)"/>
+				<line class="divider" x1="301" y1="150" x2="301" y2="100" transform="rotate(120 301 301)"/>
+				<line class="divider" x1="301" y1="150" x2="301" y2="100" transform="rotate(180 301 301)"/>
+				<line class="divider" x1="301" y1="150" x2="301" y2="100" transform="rotate(240 301 301)"/>
+				<line class="divider" x1="301" y1="150" x2="301" y2="100" transform="rotate(300 301 301)"/>
+				<circle class="rim" r="200" cx="301" cy="301"/>
+				<text x="286" y="143" textLength="30" transform="rotate(30 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:40;">0</text>
+				<text x="286" y="143" textLength="30" transform="rotate(90 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:40;">1</text>
+				<text x="286" y="143" textLength="30" transform="rotate(150 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:40;">2</text>
+				<text x="286" y="143" textLength="30" transform="rotate(210 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:40;">3</text>
+				<text x="286" y="143" textLength="30" transform="rotate(270 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:40;">4</text>
+				<text x="286" y="143" textLength="30" transform="rotate(330 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:40;">5</text>
+
+			</g>
+
+			<g>
+				<animateTransform id="minute" attributeName="transform" attributeType="XML" type="rotate" dur="600s" repeatCount="indefinite"/>
+
+				<line class="divider" x1="301" y1="200" x2="301" y2="150" transform="rotate(0 301 301)"/>
+				<line class="divider" x1="301" y1="200" x2="301" y2="150" transform="rotate(36 301 301)"/>
+				<line class="divider" x1="301" y1="200" x2="301" y2="150" transform="rotate(72 301 301)"/>
+				<line class="divider" x1="301" y1="200" x2="301" y2="150" transform="rotate(108 301 301)"/>
+				<line class="divider" x1="301" y1="200" x2="301" y2="150" transform="rotate(144 301 301)"/>
+				<line class="divider" x1="301" y1="200" x2="301" y2="150" transform="rotate(180 301 301)"/>
+				<line class="divider" x1="301" y1="200" x2="301" y2="150" transform="rotate(216 301 301)"/>
+				<line class="divider" x1="301" y1="200" x2="301" y2="150" transform="rotate(252 301 301)"/>
+				<line class="divider" x1="301" y1="200" x2="301" y2="150" transform="rotate(288 301 301)"/>
+				<line class="divider" x1="301" y1="200" x2="301" y2="150" transform="rotate(324 301 301)"/>
+				<circle class="rim" r="150" cx="301" cy="301"/>
+				<text x="286" y="193" textLength="30" transform="rotate(18 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:40;">0</text>
+				<text x="286" y="193" textLength="30" transform="rotate(54 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:40;">1</text>
+				<text x="286" y="193" textLength="30" transform="rotate(90 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:40;">2</text>
+				<text x="286" y="193" textLength="30" transform="rotate(126 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:40;">3</text>
+				<text x="286" y="193" textLength="30" transform="rotate(162 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:40;">4</text>
+				<text x="286" y="193" textLength="30" transform="rotate(198 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:40;">5</text>
+				<text x="286" y="193" textLength="30" transform="rotate(234 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:40;">6</text>
+				<text x="286" y="193" textLength="30" transform="rotate(270 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:40;">7</text>
+				<text x="286" y="193" textLength="30" transform="rotate(306 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:40;">8</text>
+				<text x="286" y="193" textLength="30" transform="rotate(342 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:40;">9</text>
+			</g>
+
+			<g>
+				<animateTransform id="ampm" attributeName="transform" attributeType="XML" type="rotate" dur="24h" repeatCount="indefinite"/>
+
+				<line class="divider" x1="301" y1="200" x2="301" y2="400"/>
+				<circle class="rim" r="100" cx="301" cy="301"/>
+				<text x="261" y="275" textLength="80" transform="rotate(90 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:50;">AM</text>
+				<text x="261" y="275" textLength="80" transform="rotate(-90 301 301)" style="font-family:Tahoma, Geneva, sans-serif; font-size:50;">PM</text>
+			</g>
+
+			<line id="pointer" x1="301" y1="301" x2="301" y2="0"/>
+			<circle id="centre" cx="301" cy="301"/>
+
+		</svg>
+		
+		<script>
+			var sec = new Date().getSeconds();
+			var min = (new Date().getMinutes() % 10 + sec / 60) * 36;
+			var min10 = (new Date().getMinutes() + sec / 60) * 6;
+			var hour = (new Date().getHours() + new Date().getMinutes() / 60 + new Date().getSeconds() / 3600) * 30;
+			document.getElementById("minute").setAttribute("values", (360 - min) + " 301 301;" + -min + " 301 301");
+			document.getElementById("10min").setAttribute("values", (360 - min10) + " 301 301;" + -min10 + " 301 301");
+			document.getElementById("hour").setAttribute("values", (360 - hour) + " 301 301;" + -hour + " 301 301");
+			document.getElementById("ampm").setAttribute("values", (360 - hour/2) + " 301 301;" + -hour/2 + " 301 301");
+
+		</script>
+</body>
+</html>
+

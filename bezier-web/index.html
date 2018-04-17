@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SampleApp</title>
+  <link rel="stylesheet" media="all" href="/assets/application-1b9a018a48e9405506ffbc2621b97345d81548294c2fe253db11c522f4aa911d.css" data-turbolinks-track="true" />
+  <script src="/assets/application-9192d53def006bccfc8e6bb270fdcffc7b8e8bd2b70504607801f3e938ba2648.js" data-turbolinks-track="true"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="A7cFsIdvvsnqvFqg2N/IFX60oOIXV8T6LjoPmZtBuAY7WMz+gb6t1jz/+czxu/o/JuVSYYbxrjVaiOVGfOC75A==" />
+</head>
+<body>
+
+<style type="text/css">
+	* {
+		margin: 0;
+		border: 0;
+		padding: 0;
+	}
+
+	body {
+		background-color: #cdf;
+	}
+
+	svg, canvas {
+		margin-left: calc(50% - 400px);
+		margin-top: 20px;
+		width: 800px;
+		height: 600px;
+		border: 5px solid black;
+		background-color: #dcb;
+	}
+
+	line, path {
+		stroke: #234;
+		stroke-width:4px;
+		fill: none;
+	}
+
+	.trace {
+		stroke: #fff;
+		stroke-width: 5px;
+		fill: none;
+	}
+
+	.point {
+		r: 5;
+		fill: #4d4;
+		stroke: #4d4;
+		stroke-width: 1;
+	}
+</style>
+
+
+
+<svg>
+<!-- Quadratic Traced Paths -->
+	<path class="trace" d="M400 83Q150 516 650 516"/>
+	<path class="trace" d="M150 516Q650 516 400 83"/>
+	<path class="trace" d="M650 516Q400 83 150 516"/>
+
+<!-- Cubic Traced Paths -->
+	<path class="trace" d="M650,516 C482,226 316,516 650,516"/>
+	<path class="trace" d="M150,516 C483,516 316,227 150,516"/>
+	<path class="trace" d="M400,83 C233,372 567,372 400,83"/>
+
+<g>
+
+	<animate attributeName="opacity" attributeType="CSS" begin="0s" dur="10s" values="1;1;1;1;1;0;1" repeatCount="indefinite"/>
+<!-- Base Lines -->
+	<line x1="400" y1="83" x2="150" y2="516"/>
+	<line x1="150" y1="516" x2="650" y2="516"/>
+	<line x1="650" y1="516" x2="400" y2="83"/>
+
+<!-- Moving Lines -->
+	<line>
+		<animate attributeName="x1" attributeType="XML" begin="0s" dur="2s" values="400;150" repeatCount="indefinite"/>
+		<animate attributeName="y1" attributeType="XML" begin="0s" dur="2s" values="83;516" repeatCount="indefinite"/>
+		<animate attributeName="x2" attributeType="XML" begin="0s" dur="2s" values="150;650" repeatCount="indefinite"/>
+		<animate attributeName="y2" attributeType="XML" begin="0s" dur="2s" values="516;516" repeatCount="indefinite"/>
+	</line>
+	<line>
+		<animate attributeName="x1" attributeType="XML" begin="0s" dur="2s" values="150;650" repeatCount="indefinite"/>
+		<animate attributeName="y1" attributeType="XML" begin="0s" dur="2s" values="516;516" repeatCount="indefinite"/>
+		<animate attributeName="x2" attributeType="XML" begin="0s" dur="2s" values="650;400" repeatCount="indefinite"/>
+		<animate attributeName="y2" attributeType="XML" begin="0s" dur="2s" values="516;83" repeatCount="indefinite"/>
+	</line>
+	<line>
+		<animate attributeName="x1" attributeType="XML" begin="0s" dur="2s" values="650;400" repeatCount="indefinite"/>
+		<animate attributeName="y1" attributeType="XML" begin="0s" dur="2s" values="516;83" repeatCount="indefinite"/>
+		<animate attributeName="x2" attributeType="XML" begin="0s" dur="2s" values="400;150" repeatCount="indefinite"/>
+		<animate attributeName="y2" attributeType="XML" begin="0s" dur="2s" values="83;516" repeatCount="indefinite"/>
+	</line>
+<!-- Base Dots -->
+	<circle class="point" cx="400" cy="83"/>
+	<circle class="point" cx="150" cy="516"/>
+	<circle class="point" cx="650" cy="516"/>
+
+
+<!-- Moving Dots -->
+	<circle class="point">
+		<animateMotion path="M400 83L150 516" begin="0s" dur="2s" repeatCount="indefinite"/>
+	</circle>
+	<circle class="point">
+		<animateMotion path="M150 516L650 516" begin="0s" dur="2s" repeatCount="indefinite"/>
+	</circle>
+	<circle class="point">
+		<animateMotion path="M650 516L400 83" begin="0s" dur="2s" repeatCount="indefinite"/>
+	</circle>
+
+
+<!-- Quadratic Dots -->
+	<circle class="point">
+		<animateMotion path="M400 83Q150 516 650 516" begin="0s" dur="2s" repeatCount="indefinite"/>
+	</circle>
+	<circle class="point">
+		<animateMotion path="M150 516Q650 516 400 83" begin="0s" dur="2s" repeatCount="indefinite"/>
+	</circle>
+	<circle class="point">
+		<animateMotion path="M650 516Q400 83 150 516" begin="0s" dur="2s" repeatCount="indefinite"/>
+	</circle>
+
+<!-- Cubic Dots -->
+	<circle class="point">
+		<animateMotion path="M650,516 C482,226 316,516 650,516" begin="0s" dur="2s" repeatCount="indefinite"/>
+	</circle>
+	<circle class="point">
+		<animateMotion path="M150,516 C483,516 316,227 150,516" begin="0s" dur="2s" repeatCount="indefinite"/>
+	</circle>
+	<circle class="point">
+		<animateMotion path="M400,83 C233,372 567,372 400,83" begin="0s" dur="2s" repeatCount="indefinite"/>
+	</circle>
+</g>
+
+
+
+</svg>
+</body>
+</html>
+
